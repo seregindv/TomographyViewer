@@ -1,8 +1,18 @@
-﻿.page-link{
+﻿.page-link {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
     color: blue;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    display: inline-block;
+    margin-right: 20px;
 }
+
+    .page-link.current {
+        cursor: default;
+        border-bottom-width: 0;
+        color: black;
+    }
 
 .image-div {
     text-align: center;
@@ -21,19 +31,47 @@
     border-spacing: 5px;
 }
 
-.scroller .button {
-    width: 50px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-    font-weight: bold;
+    .scroller .button {
+        width: 50px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .scroller .panel {
+        display: table-cell;
+        background: #F0F0F0;
+        border-radius: 10px;
+        height: 50px;
+    }
+
+    .scroller .thumb {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 50px;
+        background: #d0d0d0;
+        left: 500px;
+        border-radius: inherit;
+    }
+
+.load-indicator {
+    width: 100%;
+    height: 6px;
+    background-color: #F0F0FF;
+    overflow: hidden;
 }
 
-.scroller .panel {
-    display: table-cell;
-    background: #F0F0F0;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    height: 50px;
-}
+    .load-indicator.error {
+        background-color: #FFF0F0;
+    }
+
+    .load-indicator .progress {
+        height: 100%;
+        background-color: #9696FF;
+    }
+
+    .load-indicator.error .progress {
+        background-color: #FF9696;
+    }
