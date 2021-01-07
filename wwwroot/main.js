@@ -116,8 +116,7 @@ class ImageViewer {
             this._updateImageSource();
             this._updateThumbPosition();
         }
-        e.preventDefault();
-        e.stopPropagation();
+        return this._preventDefault(e);
     }
 
     _moveRight(e) {
@@ -126,8 +125,7 @@ class ImageViewer {
             this._updateImageSource();
             this._updateThumbPosition();
         }
-        e.preventDefault();
-        e.stopPropagation();
+        return this._preventDefault(e);
     }
 
     _onTouch(e) {
